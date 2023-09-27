@@ -119,6 +119,7 @@ quizContainer.innerHTML = '';
   quizContainer.appendChild(optionsElement);
 }
 
+
 function checkAnswer() {
   const selectedOption = document.querySelector('input[name="quiz"]:checked');
   if (selectedOption) {
@@ -141,6 +142,8 @@ function checkAnswer() {
     }
   }
 }
+
+
 
 displayQuestion();
 
