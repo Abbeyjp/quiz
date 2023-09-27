@@ -57,7 +57,7 @@ const quizQuestions = [
       'Manchester United F.C.',
       'Liverpool F.C.',
     ],
-    answer: 'Whale Shark',
+    answer: 'Manchester United F.C.',
   },
   {
     question: 'Which species has genetics almost similar to that of the human?',
@@ -91,7 +91,7 @@ function displayQuestion() {
   qElement.innerHTML = qData.question;
 
   const oElement = document.createElement('div');
-  oElement.className = 'options';
+  oElement.className = 'opt';
 
   const shuffledOptions = [...qData.options];
   shuffleArray(shuffledOptions);

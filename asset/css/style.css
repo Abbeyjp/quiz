@@ -1,23 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap');
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Oswald', sans-serif;
   background: #b9b3a9;
   display: flex;
   justify-content: center;
 }
 
 .container {
-  width: 450px;
-  padding: 20px;
+  width: 80%;
+  padding: 10px;
   margin-top: 80px;
-  background-color: #fff;
+  font-size: 3vh;
+  background-color: #FEE715;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
 }
 
 h1 {
   text-align: center;
+  background: #b9b3a9;
 }
 
 .question {
@@ -26,7 +28,7 @@ h1 {
 }
 
 .options {
-  margin-bottom: 20px;
+  margin-bottom: 20%;
 }
 
 .option {
@@ -36,7 +38,8 @@ h1 {
 
 .button {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 20px;
+  padding-top: 20px;
   background-color: #428bca;
   color: #fff;
   border: none;
@@ -46,12 +49,16 @@ h1 {
   transition: background-color 0.3s;
   margin-right: 10px;
 }
+.button:hover {
+  background-color: #3071a9;
+}
 
-
+.result {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
 
 .hide{
   display: none;
-}
-.button:hover {
-  background-color: #3071a9;
 }
