@@ -143,6 +143,9 @@ function checkAnswer() {
   }
 }
 
+submitButton.addEventListener('click', checkAnswer);
+retryButton.addEventListener('click', retryQuiz);
+showAnswerButton.addEventListener('click', showAnswer);
 
 
 displayQuestion();
