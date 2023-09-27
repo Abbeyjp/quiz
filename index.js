@@ -119,5 +119,28 @@ quizContainer.innerHTML = '';
   quizContainer.appendChild(optionsElement);
 }
 
+function checkAnswer() {
+  const selectedOption = document.querySelector('input[name="quiz"]:checked');
+  if (selectedOption) {
+    const answer = selectedOption.value;
+    if (answer === quizQuestions[cQuest].answer) {
+      score++;
+    } else {
+      incorrectAnswers.push({
+        question: quizQuestions[cQuest].question,
+        incorrectAnswer: answer,
+        correctAnswer: quizQuestions[cQuest].answer,
+      });
+    }
+    cQuest++;
+    selectedOption.checked = false;
+    if (cQuest < quizQuestions.length) {
+      displayQuestion();
+    } else {
+      displayResult();
+    }
+  }
+}
+
 displayQuestion();
 
