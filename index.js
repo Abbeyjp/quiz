@@ -15,7 +15,7 @@ const quizData = [
     answer: 'France',
   },
   {
-    question: 'What is the tallest mountain in the world?',
+    question: 'What is the name of the tallest mountain in the world?',
     options: ['Mount Everest', 'K2', 'Kangchenjunga', 'Makalu'],
     answer: 'Mount Everest',
   },
@@ -57,7 +57,7 @@ const quizData = [
       'Manchester United F.C.',
       'Liverpool F.C.',
     ],
-    answer: 'Whale Shark',
+    answer: 'Manchester United F.C.',
   },
   {
     question: 'Which animal has genetics almost similar to that of the human?',
@@ -69,7 +69,55 @@ const quizData = [
 
 const quizContainer = document.getElementById('question');
 const resultContainer = document.getElementById('manswer');
+const submitButton = document.getElementById('submit');
+const retryButton = document.getElementById('retry');
+const showAnswerButton = document.getElementById('showAnswer');
 
 
 
+
+let currentQuestion = 0;
+let score = 0;
+let incorrectAnswers = [];
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+function displayQuestion() {
+  const questionData = quizData[currentQuestion];
+
+  const questionElement = document.createElement('div');
+  questionElement.className = 'question';
+  questionElement.innerHTML = questionData.question;
+
+  const optionsElement = document.createElement('div');
+  optionsElement.className = 'options';
+
+  const shuffledOptions = [...questionData.options];
+  shuffleArray(shuffledOptions);
+
+  for (let i = 0; i < shuffledOptions.length; i++) {
+    const option = document.createElement('label');
+    option.className = 'option';
+
+    const radio = document.createElement('input');
+    radio.type = 'radio';
+    radio.name = 'quiz';
+    radio.value = shuffledOptions[i];
+
+    const optionText = document.createTextNode(shuffledOptions[i]);
+
+    option.appendChild(radio);
+    option.appendChild(optionText);
+    optionsElement.appendChild(option);
+  }
+quizContainer.innerHTML = '';
+  quizContainer.appendChild(questionElement);
+  quizContainer.appendChild(optionsElement);
+}
+
+displayQuestion();
 
