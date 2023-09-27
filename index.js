@@ -60,8 +60,8 @@ const quizQuestions = [
     answer: 'Whale Shark',
   },
   {
-    question: 'Which animal has genetics almost similar to that of the human?',
-    options: ['Lion', 'Rat', 'Elephant', 'Giraffe'],
+    question: 'Which species has genetics almost similar to that of the human?',
+    options: ['Lion', 'Rat', 'Elephant', 'Snake'],
     answer: 'Rat',
   },
 ];
@@ -118,7 +118,7 @@ function displayQuestion() {
 }
 
 function checkAnswer() {
-  const selectedOption = document.querySelector('input[name="quiz"]:checked');
+  const selectedOption = document.querySelector('input[name="question"]:checked');
   if (selectedOption) {
     const answer = selectedOption.value;
     if (answer === quizQuestions[cQuest].answer) {
@@ -158,6 +158,30 @@ function retryQuiz() {
   showAnswerButton.style.display = 'none';
   rContainer.innerHTML = '';
   displayQuestion();
+}
+
+function showAnswer() {
+  qContainer.style.display = 'none';
+  submitButton.style.display = 'none';
+  retryButton.style.display = 'inline-block';
+  showAnswerButton.style.display = 'none';
+
+  let wAnsHtml = '';
+  for (let i = 0; i < wAns.length; i++) {
+    wAnsHtml += `
+      <p>
+        <strong>Question:</strong> ${wAns[i].question}<br>
+        <strong>Your Answer:</strong> ${wAns[i].incorrectAnswer}<br>
+        <strong>Correct Answer:</strong> ${wAns[i].correctAnswer}
+      </p>
+    `;
+  }
+
+  rContainer.innerHTML = `
+    <p>You scored ${score} out of ${quizQuestions.length}!</p>
+    <p>Incorrect Answers:</p>
+    ${wAnsHtml}
+  `;
 }
 
 
