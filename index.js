@@ -1,3 +1,4 @@
+/* Adding the quiz data */
 const quizQuestions = [
   {
     question: 'What is the capital of India',
@@ -75,14 +76,14 @@ const showAnswerButton = document.getElementById('showAnswer');
 let cQuest = 0;
 let score = 0;
 let wAns = [];
-
+/** Function to shuffle the options of each question eachtime */
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
   }
 }
-
+/** Function to display the data*/
 function displayQuestion() {
   const qData = quizQuestions[cQuest];
 
@@ -95,7 +96,7 @@ function displayQuestion() {
 
   const shuffledOptions = [...qData.options];
   shuffleArray(shuffledOptions);
-
+/** Creating the styling within the js */
   for (let i = 0; i < shuffledOptions.length; i++) {
     const option = document.createElement('label');
     option.className = 'option';
@@ -116,7 +117,7 @@ function displayQuestion() {
   qContainer.appendChild(qElement);
   qContainer.appendChild(oElement);
 }
-
+/** Function to check the answer and add the score*/
 function checkAnswer() {
   const selectedOption = document.querySelector('input[name="question"]:checked');
   if (selectedOption) {
@@ -139,7 +140,7 @@ function checkAnswer() {
     }
   }
 }
-
+/** Function to display the final result*/
 function displayResult() {
   qContainer.style.display = 'none';
   submitButton.style.display = 'none';
@@ -147,7 +148,7 @@ function displayResult() {
   showAnswerButton.style.display = 'inline-block';
   rContainer.innerHTML = `You scored ${score} out of ${quizQuestions.length}!`;
 }
-
+/** Function to skip the process and retry*/
 function retryQuiz() {
   cQuest = 0;
   score = 0;
@@ -159,7 +160,7 @@ function retryQuiz() {
   rContainer.innerHTML = '';
   displayQuestion();
 }
-
+/** Function to display all the answers of the questions that were wrong*/
 function showAnswer() {
   qContainer.style.display = 'none';
   submitButton.style.display = 'none';
@@ -176,7 +177,7 @@ function showAnswer() {
       </p>
     `;
   }
-
+  /** Display the present score that was achieved */
   rContainer.innerHTML = `
     <p>You scored ${score} out of ${quizQuestions.length}!</p>
     <p>Incorrect Answers:</p>
