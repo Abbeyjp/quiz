@@ -26,7 +26,7 @@ const quizQuestions = [
       'Lilly',
       'Sunflower',
       'Cherry blossom',
-      'Rose',
+      'Rose'
     ],
     answer: 'Cherry blossom',
   },
@@ -41,7 +41,7 @@ const quizQuestions = [
       '11',
       '15',
       '1',
-      '7',
+      '7'
     ],
     answer: '11',
   },
@@ -56,7 +56,7 @@ const quizQuestions = [
       'FC Bayen Munich',
       'Manchester City F.C.',
       'Manchester United F.C.',
-      'Liverpool F.C.',
+      'Liverpool F.C.'
     ],
     answer: 'Manchester United F.C.',
   },
@@ -96,7 +96,7 @@ function displayQuestion() {
 
   const shuffledOptions = [...qData.options];
   shuffleArray(shuffledOptions);
-/** Creating the styling within the js */
+  /** Creating the styling within the js */
   for (let i = 0; i < shuffledOptions.length; i++) {
     const option = document.createElement('label');
     option.className = 'option';
@@ -179,7 +179,7 @@ function showAnswer() {
   }
   /** Display the present score that was achieved */
   rContainer.innerHTML = `
-    <p>You scored ${score} out of ${quizQuestions.length}!</p>
+    <p>You have scored ${score} out of ${quizQuestions.length}!</p>
     <p>Incorrect Answers:</p>
     ${wAnsHtml}
   `;

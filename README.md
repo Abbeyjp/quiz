@@ -1,39 +1,89 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Quiz App
 
-Welcome,
+Quiz app is a simple and classic app for checking the knowledge. There are around 10 questions that has bee in the loop for the knowledge test. The app helps the users in measuring their knowledge
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+![Responsice Mockup](https://github.com/Abbeyjp/mod-cars/blob/main/assets/images/AllResolution.png)
 
-## Codeanywhere Reminders
+## Features 
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+This is a simple website where the user has to just click on the answers till th end and they will find the result at the end. They also do have multiple options as below
 
-`python3 -m http.server`
+### Existing Features
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+- __Submit Button__
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+  - There is no navigation bar as it is a simple page that projects the questions.
 
-`http_server`
+- __Retry Button__
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+  - This section displays the first question.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+- __Answer Button__
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+  - This provides the user with the basic rules of the game or the way the game works.
 
-To log into the Heroku toolbelt CLI:
+![Club Ethos](https://github.com/Abbeyjp/mod-cars/blob/main/assets/images/value.png)
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- __Regional Contact Times section__
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+  - This section will allow the user to see exactly when can they contact us depending on the region for extensive support. 
+  - This section will have fixed times with specified time zone for easy contact at different continent.
 
----
+![Meetup Times](https://github.com/Abbeyjp/mod-cars/blob/main/assets/images/contact.png)
 
-Happy coding!
+- __The Footer__ 
+
+  -In this the footer is null since this is a 1-2 minutes game where they check their aptitude.
+
+### Features Left to Implement
+
+- We can include a timer for the competition, add multiplayer contest
+
+## Testing 
+
+The website was well tested with different tools and at different resolution. The project is based on 3 different resolution for PC, tablets and mobile. The varition of resolution can change the design as per the diplay requirement.
+
+
+### Validator Testing 
+
+- HTML
+  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmod-cars.abbey-johnsonjo.repl.co%2F)
+- CSS
+  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmod-cars.abbey-johnsonjo.repl.co%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+-JSON
+ - No much syntax error
+
+### Unfixed Bugs
+
+-Javascript shows a basic error but it does work in the backend.
+
+## Deployment
+
+This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub) 
+
+- The site was deployed to GitHub pages. The steps to deploy are as follows: 
+  - In the GitHub repository, navigate to the Settings tab 
+  - From the source section drop-down menu, select the Master Branch
+  - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
+
+The live link can be found here - https://abbeyjp.github.io/mod-cars/
+
+
+## Credits 
+
+Most of the functions has been standard and some of the features where used to make the website more responsive and dynamic.
+
+  -Slideshow animation -  [Classic Driver] "https://www.classicdriver.com"
+
+  -Special request form- "https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_contact_form"
+  
+  -Javascript- "https://www.geeksforgeeks.org/how-to-create-a-simple-javascript-quiz/" & "https://www.codewithfaraz.com/content/161/build-a-quiz-application-with-html-css-and-javascript-step-by-step-guide"
+
+
+
+### Content 
+
+- The text for the Home page was taken from [Google] and resourced.
+
+- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
